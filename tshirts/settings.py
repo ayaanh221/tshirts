@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_forms_bootsrap',
+    'django_forms_bootstrap',
     'accounts',
-    'form_utils',
+    'products',
+    
     ]
     
 
@@ -127,4 +128,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.sessionstorage'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
