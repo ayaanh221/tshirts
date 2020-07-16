@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'accounts',
     'products',
+    'cart'
     
     ]
     
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents'
             ],
         },
     },
@@ -106,10 +108,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTHENTICATION_BACKENDS =[
-    'django.contrib.auth.backend',
-    'accounts.backends.CaseInsensitive']
+AUTHENTICATION_BACKENDS = [
 
+    'django.contrib.auth.backends.ModelBackend',
+
+    'accounts.backends.CaseInsensitiveAuth'
+
+]
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
