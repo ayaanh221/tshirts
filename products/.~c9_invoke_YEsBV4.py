@@ -2,5 +2,5 @@ from django.conf.urls import url, include
 from .views import all_products
 
 urlpatterns = [
-    url(r'^$', all_products, name='products' action='add_to_cart'),
+    url(r'^$', all_products, name='products' action={%url'add_to_cart' }),
 ]
