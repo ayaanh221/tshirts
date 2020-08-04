@@ -1,20 +1,15 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
-
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.torontotees.com%2Fmen-s-super-soft-cotton-tee.html&psig=AOvVaw3tiKlBrjmNEUKngr7t5OEc&ust=1595853459720000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDy38_36uoCFQAAAAAdAAAAABAD" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.torontotees.com%2Fmen-s-super-soft-cotton-tee.html&psig=AOvVaw3tiKlBrjmNEUKngr7t5OEc&ust=1595853459720000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDy38_36uoCFQAAAAAdAAAAABAD" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.torontotees.com%2Fmen-s-super-soft-cotton-tee.html&psig=AOvVaw3tiKlBrjmNEUKngr7t5OEc&ust=1595853459720000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDy38_36uoCFQAAAAAdAAAAABAD" class="d-block w-100" alt="...">
-    </div>
-  </div>
-</div>
-    {% for product in products %}
+<section class="intro">         
+         <div class="inner">          
+         <div class="content">          
+         <h1>Urban Shirts</h1>              
+         <a class="btn" href="">SHOP NOW</a>           
+         </div>      
+         </div>       
+         </section>    
+         {% for profile in profile %}
+   
 
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
@@ -36,5 +31,7 @@
             </div>
         </div>
     {% endfor %}
-</div>
+
+  
+    <p>You are logged in as {{ user.email }} </p>
 {% endblock %}

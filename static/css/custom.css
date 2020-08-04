@@ -64,3 +64,14 @@ caption p {
 .product-description {
     min-height: 40px;
 }
+
+.card-image{
+  padding: 50px;
+}
+
+.img-fluid{
+  max-width: 100%;
+}
+
+
+
