@@ -72,6 +72,13 @@ caption p {
 .img-fluid{
   max-width: 100%;
 }
-
+.panel-body{
+    margin:0 auto;
+    text-align: center;
+    
+}
+.toner{
+    color: red;
+}
 
 
