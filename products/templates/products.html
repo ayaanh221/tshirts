@@ -1,27 +1,50 @@
+
+
 {% extends 'base.html' %}
 
-{% block content %}
+
+{% block content %}  
+<div class="background-products">
+<!------------------------announcement lable-->
+<div class="announcement-bar" role="region" aria-label="Announcement"><p class="announcement-bar__message">NOW SHIPPING WORLDWIDE</p></div>
+      <!---------------------------------hero image-->
+
+<div class="hero-image">
+  <div class="hero-text">
+      
+    <h1>50% OFF ON ALL ITEMS</h1>
+    <p>HURRY BEFORE IT ENDS!!</p>
+    <button>SHOP NOW</button>
+  </div>
+</div>
+
+
+<!----------------products-->
 <div class="row row-flex">
-    {% for product in products %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+
+{% for product in products %}
+
+
+      <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
                 <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
               <h3 class="toner"> {{ product.name }}</h3>
                 <p class="product-description">{{ product.description }}</p>
-                <p>{{ product.price }}</p>
+                <p>£{{ product.price }}</p>
 
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
+               <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
                         <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
                         <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add To Cart</button>
+                            <button class="btn btn-dark" type="submit">Add To Cart</button>
                         </span>
                     </div>
                 </form>
             </div>
         </div>
     {% endfor %}
+</div>
 </div>
 {% endblock %}
